@@ -31,7 +31,7 @@ async def user_start(message: Message):
 # Game handler
 @router.message(GameFilter(main_buttons))
 async def game_handler(message: Message):
-    bot_choice = choice([i[0] for i in main_buttons])
+    bot_choice = choice(main_buttons)
     user_win = 0
 
     # Draw
